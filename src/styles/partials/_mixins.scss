@@ -1,0 +1,16 @@
+@mixin flex($direction: row, $justify-content: space-between, $align-items: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin flex-center($direction: "both") {
+    display: flex;
+    @if $direction == "horizontal" or $direction == "both" {
+        justify-content: center;
+    }
+    @if $direction == "vertical" or $direction == "both" {
+        align-items: center;
+    }
+}

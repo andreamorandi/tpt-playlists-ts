@@ -1,0 +1,12 @@
+@use "../partials/variables" as *;
+
+.ms_track {
+    min-width: $playlist-show-main-min-width;
+    cursor: pointer;
+    &:hover {
+        background-color: $hover-color;
+    }
+    .image-wrapper {
+        position: relative;
+    }
+}

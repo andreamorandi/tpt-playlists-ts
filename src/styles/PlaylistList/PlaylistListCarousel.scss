@@ -1,0 +1,23 @@
+@use "../partials/variables" as *;
+
+.slide {
+    p {
+        margin-top: .5rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    span {
+        font-size: .95rem;
+        color: $tertiary-text-color;
+    }
+    .image-wrapper {
+        position: relative;
+    }
+    &:hover img {
+        opacity: .7;
+    }
+}
+.carousel-arrow:active {
+    color: $primary-detail-color;
+}

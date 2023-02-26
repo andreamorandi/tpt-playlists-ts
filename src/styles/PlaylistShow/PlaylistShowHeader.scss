@@ -1,0 +1,132 @@
+@use "../partials/variables" as *;
+
+header {
+    width: calc(100% - 2 * $container-px);
+    height: $playlist-show-header-height;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0 $container-px;
+    border-bottom: .75px solid $tertiary-text-color;
+    .header-top {
+        display: flex;
+        padding-top: 1rem;
+        .header-left {
+            width: 230px;
+            flex-shrink: 0;
+            .playlist-image {
+                border-radius: 6px;
+                width: 200px;
+            }
+        }
+        .header-right {
+            width: calc(100% - 230px);
+            min-width: 300px;
+            h1 {
+                font-size: 3rem;
+                font-weight: 600;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .creator {
+                display: flex;
+                line-height: 1.9rem;
+                margin: .25rem 0 1rem 0;
+                i {
+                    width: 1.9rem;
+                    height: 1.9rem;
+                    flex-shrink: 0;
+                    font-size: 1.25rem;
+                    line-height: 1.9rem;
+                    text-align: center;
+                    border-radius: 50%;
+                    color: $secondary-text-color;
+                    background-color: $primary-detail-color;
+                }
+                p {
+                    margin-left: .65rem;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+            .details {
+                margin: .5rem 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: $tertiary-text-color;
+                p {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                span {
+                    font-size: .925rem;
+                }
+            }
+            .actions {
+                display: flex;
+                .play-button-xl {
+                    display: inline-block;
+                    position: relative;
+                    width: 11.5rem;
+                    height: 2.6rem;
+                    flex-shrink: 0;
+                    border-radius: 50px;
+                    cursor: pointer;
+                    background-color: $primary-detail-color;
+                    span {
+                        position: absolute;
+                        left: 4rem;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        letter-spacing: .5px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                    }
+                    i {
+                        position: absolute;
+                        left: 1.7rem;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+                .circle {
+                    width: 2.6rem;
+                    height: 2.6rem;
+                    flex-shrink: 0;
+                    line-height: 2.6rem;
+                    text-align: center;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    margin-left: 1rem;
+                    border: 1.25px solid $tertiary-text-color;
+                    i {
+                        color: $secondary-text-color;
+                    }
+                    &:hover {
+                        border: 1.25px solid $primary-text-color;
+                    }
+                    &:hover i {
+                        color: $primary-text-color;
+                    }
+                }
+            }
+        }
+    }
+    .header-bottom {
+        min-width: $playlist-show-main-min-width;
+        margin-top: .75rem;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+        span, i:not(.square) {
+            color: $secondary-text-color;
+        }
+    }
+}

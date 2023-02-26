@@ -1,0 +1,18 @@
+@use "../partials/variables" as *;
+
+.show {
+    width: 100%;
+    height: $playlist-show-main-height;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    overflow: scroll;
+    padding: .5rem 0;
+}
+.list {
+    padding-top: 1.25rem;
+    padding-bottom: 2.25rem;
+}
+.square {
+    color: $tertiary-text-color;
+}
